@@ -1,0 +1,307 @@
+﻿@page "/"
+<header class="bg-white shadow-lg">
+    <nav class="container mx-auto px-6 py-4">
+        <div class="flex justify-between items-center">
+            <div class="flex items-center">
+                <a class="text-xl font-bold text-gray-800 uppercase
+                    hover:text-gray-700" href="#">BlazeWind</a>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<section class="bg-gray-200 py-10">
+    <div class="container mx-auto px-4">
+        <div class="flex flex-wrap -mx-4">
+            <div class="px-4 mb-10 lg:mb-0">
+                <h2 class="text-4xl font-bold mb-4">Customizing BlazeWind with
+                    Tailwind</h2>
+                <p class="mb-4">In this blog post, we'll walk you through the
+                    process of customizing our BlazeWind project with Tailwind
+                    CSS.</p>
+                <p class="mb-4">We'll cover everything from installing Tailwind
+                    and configuring it to work with our project, to customizing
+                    the package manager with concurrently, SASS, and cross-env.</p>
+                <p class="mb-4">By the end of this guide, you'll have a deeper
+                    understanding of how to maximize Tailwind with Blazor and
+                    Node.js CLI.</p>
+                <p class="mb-4">Let's get started!</p>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="bg-gray-100 py-10">
+    <div class="container mx-auto px-4">
+        <div class="flex flex-wrap -mx-4">
+            <div class=" px-4 mb-10 lg:mb-0">
+                <h2 class="text-4xl font-bold mb-4">Creating a Blazor
+                    WebAssembly Application with .NET 7 and Tailwind CSS</h2>
+                <p class="mb-4">To create a demo of a Blazor WebAssembly
+                    application using .NET 7, we'll start by running the
+                    following command in the terminal:</p>
+                <code class="mb-4 block bg-gray-200 p-2 rounded-lg"><span
+                        class="text-gray-600">dotnet new blazorwasm -f net7.0 -n
+                        BlazeWind</span></code>
+                <p class="mb-4">Here, we're using the dotnet new command with
+                    the blazorwasm template and specifying the target framework
+                    as net7.0. Additionally, we're providing the -n option to
+                    set the project name to BlazeWind, as per our naming
+                    convention where "Blaze" refers to Blazor and "Wind" refers
+                    to Tailwind CSS.</p>
+                <p class="mb-4">After running this command, you should see a new
+                    directory called BlazeWind created in your current working
+                    directory. This directory contains the initial files and
+                    folders of a Blazor WebAssembly project, including a wwwroot
+                    folder for static files and a Pages folder for the
+                    application pages.</p>
+                <p class="mb-4">To verify that the project was created
+                    successfully, you can navigate into the BlazeWind directory
+                    and run the application using the following commands:</p>
+                <code class="mb-4 block bg-gray-200 p-2 rounded-lg"><span
+                        class="text-gray-600">cd BlazeWind<br>dotnet run</span></code>
+                <p class="mb-4">This should launch the application in your
+                    default web browser at https://localhost:5001. You should
+                    see the default Blazor WebAssembly app running, which
+                    includes a counter and weather forecast components.</p>
+                <p class="mb-4">In the next section, we'll dive into customizing
+                    the project and adding Tailwind CSS styles to it.</p>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="bg-gray-100 py-10">
+    <div class="container mx-auto px-4">
+        <div class="flex flex-wrap -mx-4">
+            <div class=" px-4 mb-10 lg:mb-0">
+                <p class="mb-4">First, let's make sure we have npm installed on
+                    our system. Open a terminal and run the command <code
+                        class="bg-gray-300">npm -v</code>. If npm is installed,
+                    this command will display the version number. If it's not
+                    installed, you can download and install it from the official
+                    npm website.</p>
+
+                <p class="mb-4">Once npm is installed, navigate to the root
+                    directory of our BlazeWind project in the terminal and run
+                    the command <code class="bg-gray-300">npm i -D tailwindcss</code>.
+                    This will download and install the Tailwind CSS library and
+                    its dependencies in our project.</p>
+
+                <p class="mb-4">Next, we need to create a configuration file for
+                    Tailwind <code class="bg-gray-300">tailwind.config.js</code>.
+                    In the root directory of our project, using the following
+                    CLI:</p>
+
+                <pre class="bg-gray-200 p-4 rounded-lg text-gray-600">
+    <code>npx tailwindcss init</code>
+</pre>
+                <p class="mb-4">Then We modify the file with the following Code</p>
+                <pre class="bg-gray-200 p-4 rounded-lg text-gray-600">
+    <code>
+        module.exports = {
+            content: ["./**/*.{razor,html,cshtml,css}"],
+            theme: {
+                extend: { },
+                plugins: [],
+            }
+        };
+    </code>
+</pre>
+                <p class="mb-4">The content property is an array of file globs
+                    that Tailwind should search for classes to include in the
+                    final CSS output. In this case, it is set to include all
+                    files with the extensions .razor, .html, .cshtml, and .css
+                    that are located in any subdirectory of the project.</p>
+                <p class="mb-4">Finally, we need to include the Tailwind CSS
+                    file in our application. Open the file <code
+                        class="bg-gray-300">wwwroot/index.html</code> and add
+                    the following line inside the <code class="bg-gray-300">&lt;head&gt;</code>
+                    tag:</p>
+
+                <pre class="bg-gray-200 p-4 rounded-lg text-gray-600">
+    <code>&lt;link rel="stylesheet" href="css/app.css"&gt;</code>
+</pre>
+                <p class="mb-4">In this next section, we'll take a closer look
+                    at customizing the package manager using the Concurrently
+                    package and configuring SASS and cross-env. This will allow
+                    us to easily manage and compile our stylesheets as we work
+                    on BlazeWind. Let's get started!</p>
+
+                <p class="mb-4">Now that we have our project set up and Tailwind
+                    configured, we can dive into customizing our package manager
+                    to streamline our development process.</p>
+
+                <p class="mb-4">One way to do this is by using concurrently, a
+                    package that allows us to run multiple commands concurrently
+                    in our terminal. This will come in handy when we want to run
+                    both our development server and Sass compiler at the same
+                    time.</p>
+
+                <p class="mb-4">To install concurrently and sass, we can run the
+                    following command in our terminal:</p>
+
+            </div>
+        </div>
+    </div></section>
+<section class="bg-gray-200 py-10">
+    <div class="container mx-auto px-4">
+        <div class="flex flex-wrap -mx-4">
+            <div class=" px-4 mb-10 lg:mb-0">
+                <h2 class="text-4xl font-bold mb-4">
+                    Customizing BlazeWind with Tailwind
+                </h2>
+                <p>
+                    To install concurrently and sass, we can run the following
+                    command in our terminal:
+                </p>
+                <code class="block mb-4 bg-gray-100 p-4 rounded-md text-sm">
+                    npm i -D concurrently sass
+                </code>
+                <p>
+                    We will also need to install cross-env to allow dotnet to
+                    restart
+                    on rude edits. To install cross-env, we can run the
+                    following
+                    command in our terminal:
+                </p>
+                <code class="block mb-4 bg-gray-100 p-4 rounded-md text-sm">
+                    npm i -D cross-env
+                </code>
+                <p>
+                    Next, we can update our package.json file to add a new
+                    script
+                    called "dev", which will use concurrently and cross-env to
+                    run
+                    both our development server and Sass compiler. Here's what
+                    our
+                    updated package.json file might look like:
+                </p>
+                <pre class="bg-gray-100 rounded-md p-4 my-4 text-sm">
+{
+    "name": "blazewind",
+    "version": "1.0.0",
+    "scripts": {
+        "start": "dotnet run",
+        "build": "dotnet build",
+        "dev": "concurrently  \"sass Styles:Styles --no-source-map -w \" \"npx tailwindcss -i .\\Styles\\app.css -o
+                .\\wwwroot\\css\\app.css --minify --watch \" \"cross-env DOTNET_WATCH_RESTART_ON_RUDE_EDIT=1 dotnet watch\""
+    },
+    "dependencies": {
+        "cross-env": "^7.0.3"
+    },
+    "devDependencies": {
+        "concurrently": "^7.6.0",
+        "sass": "^1.57.1",
+        "tailwindcss": "^3.2.7"
+    }
+}
+            </pre>
+                <p>
+                    Here, we've added a new script called "dev", which uses
+                    concurrently to run two commands at once:
+                </p>
+                <ul class="list-disc ml-8 my-4">
+                    <li>
+                        <code>DOTNET_WATCH_RESTART_ON_RUDE_EDIT=1</code>
+                        environment variable setting is used to restart the
+                        project even when there are "rude edits" made to the
+                        code. Rude edits are changes that require a restart of
+                        the project to take effect, such as changes to a Razor
+                        view or a startup configuration file.
+                    </li>
+                </ul>
+                <p>By using this command, developers can have the <code>dotnet
+                        watch</code> command automatically restart the
+                    application whenever any code changes are made, including
+                    those that would typically require a manual restart. This
+                    saves time and effort during development and can help catch
+                    errors and bugs faster.</p>
+                <p>The following commands are run using <code>concurrently</code>:</p>
+                <ul class="list-disc ml-8 my-4">
+                    <li>
+                        <code>dotnet watch</code>: This starts our development
+                        server and watches for changes to our code.
+                    </li>
+                    <li>
+                        <code>sass Styles:Styles --no-source-map -w</code>: This
+                        compiles our Sass files in the Styles directory to CSS
+                        in the Styles directory. The <code>--no-source-map</code>
+                        flag tells Sass not to generate source maps, and the
+                        <code>-w</code> flag watches the Styles directory for
+                        changes and recompiles the CSS when a change is
+                        detected.
+                    </li>
+                    <li>
+                        <code>npx tailwindcss -i .\\Styles\\app.css -o
+                            .\\wwwroot\\css\\app.css --minify --watch</code>:
+                        This compiles and processes the Tailwind CSS framework
+                        and watches for changes in our app.css file. The <code>-i</code>
+                        flag specifies the input file path, and the <code>-o</code>
+                        flag specifies the output file path. The <code>--minify</code>
+                        flag minifies the CSS, and the <code>--watch</code> flag
+                        watches the input file for changes and recompiles the
+                        output file when a change is detected.
+                    </li>
+                </ul>
+                <p>By running <code>npm run dev</code>, we can now start both
+                    our development server and Sass compiler with a single
+                    command.</p>
+                <p>With our package manager set up and running smoothly, we can
+                    focus on building out our Blazor application with Tailwind!</p>
+                <p>In this section, we'll focus on creating a new "Styles"
+                    folder within our project and configuring it to use SCSS
+                    files instead of the default CSS files that were created
+                    when we first set up the project. We'll also remove the
+                    default "BlazeWind.styles.css" file and instead manually
+                    import each SCSS partial file in our index.html file,
+                    allowing us to use the <code>@@apply</code> feature of
+                    Tailwind CSS within our Blazor components.</p>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="bg-gray-100 py-10">
+    <div class="container mx-auto px-4">
+        <div class="flex flex-wrap -mx-4">
+            <div class=" px-4 mb-10 lg:mb-0">
+                <h2 class="text-4xl font-bold mb-4">Styling with Tailwind CSS in
+                    Blazor</h2>
+                <p>Let's start by creating a new folder for our styles. At the
+                    root of our project, we'll create a folder called "Styles".
+                    Within this folder, we'll create a new file called
+                    "app.scss".</p>
+                <p>In this file, we'll import all of our partial files to style
+                    our application. Here's what our "app.scss" file might look
+                    like:</p>
+                <pre class="bg-gray-200 p-4 rounded-md"><code class="language-css">@@tailwind base;
+@@tailwind components;
+@@tailwind utilities;
+@@import "../Page/Index.razor.css";
+
+{
+@@apply font-sans font-normal;
+}</code></pre>
+                <p>By importing our SCSS files manually, we can use the @@apply
+                    feature of Tailwind CSS within our Blazor components. This
+                    allows us to easily apply pre-defined styles to our HTML
+                    elements without having to write custom CSS for each
+                    component.</p>
+                <p>To build our Blazor application, we can run the following
+                    command in our terminal:</p>
+                <pre class="bg-gray-200 p-4 rounded-md"><code class="language-shell">npm run build</code></pre>
+                <p>This will compile our project and output the build files to
+                    the bin/Debug/net7.0/wwwroot folder.</p>
+                <p>To watch for changes and automatically recompile our project
+                    as we work on it, we can use the dev script we created
+                    earlier:</p>
+                <pre class="bg-gray-200 p-4 rounded-md"><code class="language-shell">npm run dev</code></pre>
+                <p>This will start our development server and Sass compiler, and
+                    watch for changes to our code. As we make changes, our
+                    project will automatically recompile and refresh in our
+                    browser.</p>
+                <p>By utilizing these scripts, we can streamline our development
+                    process and focus on building out our Blazor application
+                    with Tailwind. Happy coding!</p>
+            </div>
+        </div>
+    </div>
+</section>
