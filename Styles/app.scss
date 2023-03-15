@@ -2,12 +2,18 @@
 @tailwind components;
 @tailwind utilities;
 
-@import "../Pages/Index.razor.css";
+@import "..\obj\Debug\net7.0\scopedcss\bundle\BlazeWind.styles.css";
 
 * {
-    @apply font-sans font-normal  ;   
+    @apply font-sans font-normal;
 }
 
+
+pre {
+    font-size: 12px !important;
+}
+
+ 
 
 #blazor-error-ui {
     background: lightyellow;

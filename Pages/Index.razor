@@ -94,8 +94,6 @@
             </div>
         </div>
     </div>
-</section>
-<section class="bg-gray-100 py-10">
     <div class="container mx-auto px-4">
         <div class="flex flex-wrap -mx-4">
             <div class=" px-4 mb-10 lg:mb-0">
@@ -129,14 +127,14 @@
 </pre>
                 <p class="mb-4">Then We modify the file with the following Code</p>
                 <pre class="bg-gray-200 p-4 rounded-lg text-gray-600">
-                <code>
-        module.exports = {
-            content: ["./**/*.{razor,html,cshtml,css}"],
-            theme: {
-                extend: { },
-                plugins: [],
-            }
-        };
+<code>
+module.exports = {
+content:["./**/*.{razor,html,cshtml,css}"],
+theme: {
+    extend: { },
+    plugins: [],
+    }
+};
     </code>
 </pre>
                 <p class="mb-4">
@@ -156,7 +154,7 @@
                 </p>
 
                 <pre class="bg-gray-200 p-4 rounded-lg text-gray-600">
-                <code>&lt;link rel="stylesheet" href="css/app.css"&gt;</code>
+<code>&lt;link rel="stylesheet" href="css/app.css"&gt;</code>
 </pre>
                 <p class="mb-4">
                     In this next section, we'll take a closer look
@@ -222,24 +220,23 @@
                     our
                     updated package.json file might look like:
                 </p>
-                <pre class="bg-gray-100 rounded-md p-4 my-4 text-sm">
+                <pre class="bg-gray-100 rounded-md p-4 my-4 text-sm sm:text-base md:text-lg lg:text-xl">
 {
-    "name": "blazewind",
-    "version": "1.0.0",
-    "scripts": {
-        "start": "dotnet run",
-        "build": "dotnet build",
-        "dev": "concurrently  \"sass Styles:Styles --no-source-map -w \" \"npx tailwindcss -i .\\Styles\\app.css -o
-                .\\wwwroot\\css\\app.css --minify --watch \" \"cross-env DOTNET_WATCH_RESTART_ON_RUDE_EDIT=1 dotnet watch\""
-    },
-    "dependencies": {
-        "cross-env": "^7.0.3"
-    },
-    "devDependencies": {
-        "concurrently": "^7.6.0",
-        "sass": "^1.57.1",
-        "tailwindcss": "^3.2.7"
-    }
+  "name": "blazewind",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "dotnet run",
+    "build": "dotnet build",
+    "dev": "concurrently  \"sass Styles:Styles --no-source-map -w \" \"npx tailwindcss -i .\\Styles\\app.css -o .\\wwwroot\\css\\app.css --minify --watch \" \"cross-env DOTNET_WATCH_RESTART_ON_RUDE_EDIT=1 dotnet watch\""
+  },
+  "dependencies": {
+    "cross-env": "^7.0.3"
+  },
+  "devDependencies": {
+    "concurrently": "^7.6.0",
+    "sass": "^1.57.1",
+    "tailwindcss": "^3.2.7"
+  }
 }
             </pre>
                 <p>
@@ -337,14 +334,14 @@
                     our application. Here's what our "app.scss" file might look
                     like:
                 </p>
-                <pre class="bg-gray-200 p-4 rounded-md"><code class="language-css">@@tailwind base;
+                <pre class="bg-gray-200 p-4 rounded-md text-sm sm:text-base md:text-lg lg:text-xl"><code class="language-css">@@tailwind base;
 @@tailwind components;
 @@tailwind utilities;
-@@import "../Page/Index.razor.css";
-
-{
-@@apply font-sans font-normal;
-}</code></pre>
+@@import "..\obj\Debug\net7.0\scopedcss\bundle\BlazeWind.styles.css";
+</code></pre>
+                <p>
+                    Make sure to remove the scoped CSS file from the head, And import it as shown above.
+                </p>
                 <p>
                     By importing our SCSS files manually, we can use the @@apply
                     feature of Tailwind CSS within our Blazor components. This
@@ -352,6 +349,7 @@
                     elements without having to write custom CSS for each
                     component.
                 </p>
+
                 <p>
                     To build our Blazor application, we can run the following
                     command in our terminal:
@@ -387,7 +385,8 @@
         <div class="flex flex-wrap -mx-4">
             <div class=" px-4 mb-10 lg:mb-0">
                 <h2 class="text-4xl font-bold mb-4">
-                    Authored by Sharaf El Dean Mohamed And Mohamed Ragab @@2023
+                    Authored by <a href="https://www.linkedin.com/in/sharaf-mansour-4a16941b0/">Sharaf El Dean Mohamed</a> And <a href="https://www.linkedin.com/in/mohamed-ragab-5257121a6/"> Mohamed Ragab </a> @@2023
+                    <a href="https://github.com/Sharaf-Mansour/BlazeWind">Open Source</a>
                 </h2>
             </div>
         </div>
