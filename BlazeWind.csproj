@@ -35,6 +35,9 @@
     <None Update="Styles\BlazeWind.styles.css">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </None>
+    <None Update="tailwind.config.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
 
 </Project>
