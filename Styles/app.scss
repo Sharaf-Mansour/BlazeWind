@@ -2,15 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
-
-@import "..\BlazeWind.styles.css";
-
-
 * {
     @apply font-sans font-normal;
 }
- 
- 
 
 #blazor-error-ui {
     background: lightyellow;
