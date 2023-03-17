@@ -39,13 +39,10 @@ jobs:
         run: dotnet publish BlazeWind.csproj -c Release -o release --nologo 
         
       - name: Install dependencies
-        run: npm i tailwindcss
+        run: npm i 
         
-      - name: List dependencies
-        run: npm ls
-              
       - name: Build CSS     
-        run: npx tailwindcss -i release/BlazeWind.styles.css -o release/BlazeWind.styles.css --minify 
+        run: npx tailwindcss -i .//release//BlazeWind.styles.css -o .//release//BlazeWind.styles.css --minify 
 
       - name: Change base-tag in index.html from / to BlazeWind
         run: sed -i 's/<base href="\/" \/>/<base href="\/BlazeWind\/" \/>/g' release/wwwroot/index.html
