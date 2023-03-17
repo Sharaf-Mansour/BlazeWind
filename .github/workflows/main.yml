@@ -41,7 +41,10 @@ jobs:
         
       - name: Install dependencies
         run: npm install
-
+        
+      - name: List dependencies
+        run: npm ls
+        
       - name: Compile SCSS
         run: sass Styles:Styles --no-source-map
       
