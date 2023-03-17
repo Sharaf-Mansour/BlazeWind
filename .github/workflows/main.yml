@@ -36,7 +36,7 @@ jobs:
         run: dotnet publish BlazeWind.csproj -c Release -o release --nologo 
         
       - name: List All files
-        run:  ls -a
+        run:  ls -a -R
 
       - name: Setup Node.js environment
         uses: actions/setup-node@v3.6.0
@@ -45,7 +45,7 @@ jobs:
         run: npm i 
         
       - name: Build CSS     
-        run: npx tailwindcss -i .//release//BlazeWind.styles.css -o .//release//BlazeWind.styles.css --minify 
+        run: npx tailwindcss -i release/wwwroot/BlazeWind.styles.css -o release/wwwroot/BlazeWind.styles.css --minify 
 
       - name: Change base-tag in index.html from / to BlazeWind
         run: sed -i 's/<base href="\/" \/>/<base href="\/BlazeWind\/" \/>/g' release/wwwroot/index.html
