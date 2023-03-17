@@ -8,9 +8,9 @@
     "publish": "concurrently \"sass Styles:Styles --no-source-map\" \"npx tailwindcss -i .\\Styles\\app.css -o .\\wwwroot\\css\\app.css --minify\""
   },
   "dependencies": {
-    "cross-env": "^7.0.3"
   },
   "devDependencies": {
+    "cross-env": "^7.0.3",
     "concurrently": "^7.6.0",
     "sass": "^1.57.1",
     "tailwindcss": "^3.2.7"
