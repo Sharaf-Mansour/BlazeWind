@@ -1,4 +1,4 @@
-@import "..\obj\Debug\net7.0\scopedcss\bundle\BlazeWind.styles.css";
+@import "..\BlazeWind.styles.css";
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
