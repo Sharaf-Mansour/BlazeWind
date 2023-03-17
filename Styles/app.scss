@@ -3,10 +3,8 @@
 @tailwind utilities;
 
 @import "..\obj\Debug\net7.0\scopedcss\bundle\BlazeWind.styles.css";
+@import '..\BlazeWind.styles.css' !optional;
 
-@if file-exists('..\BlazeWind.styles.css') {
-    @import '..\BlazeWind.styles.css';
-}
 
 * {
     @apply font-sans font-normal;
