@@ -4,15 +4,14 @@
 
 @import "..\obj\Debug\net7.0\scopedcss\bundle\BlazeWind.styles.css";
 
+@if file-exists('..\BlazeWind.styles.css') { 
+    @import 'optional-styles';
+}
+
 * {
     @apply font-sans font-normal;
 }
-
-
-pre {
-    font-size: 12px !important;
-}
-
+ 
  
 
 #blazor-error-ui {

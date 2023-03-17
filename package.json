@@ -4,7 +4,8 @@
   "scripts": {
     "start": "dotnet run",
     "build": "dotnet build",
-    "dev": "concurrently  \"sass Styles:Styles --no-source-map -w \" \"npx tailwindcss -i .\\Styles\\app.css -o .\\wwwroot\\css\\app.css --minify --watch \" \"cross-env DOTNET_WATCH_RESTART_ON_RUDE_EDIT=1 dotnet watch\""
+    "dev": "concurrently  \"sass Styles:Styles --no-source-map -w \" \"npx tailwindcss -i .\\Styles\\app.css -o .\\wwwroot\\css\\app.css --minify --watch \" \"cross-env DOTNET_WATCH_RESTART_ON_RUDE_EDIT=1 dotnet watch\"",
+    "publish": "concurrently  \"sass Styles:Styles --no-source-map -w \" \"npx tailwindcss -i .\\Styles\\app.css -o .\\wwwroot\\css\\app.css --minify \""
   },
   "dependencies": {
     "cross-env": "^7.0.3"
