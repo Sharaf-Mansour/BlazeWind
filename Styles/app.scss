@@ -4,8 +4,8 @@
 
 @import "..\obj\Debug\net7.0\scopedcss\bundle\BlazeWind.styles.css";
 
-@if file-exists('..\BlazeWind.styles.css') { 
-    @import 'optional-styles';
+@if file-exists('..\BlazeWind.styles.css') {
+    @import '..\BlazeWind.styles.css';
 }
 
 * {
