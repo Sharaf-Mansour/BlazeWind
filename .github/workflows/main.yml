@@ -42,13 +42,13 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-#       - name: Compile SCSS
-#         run: sass Styles:Styles --no-source-map -w 
+      - name: Compile SCSS
+        run: sass Styles:Styles --no-source-map
       
-#       - name: Build CSS     
-#         run: npx tailwindcss -i .\\Styles\\app.css -o .\\wwwroot\\css\\app.css --minify 
-      - name: NPM publish 
-        run : npm run publish
+      - name: Build CSS     
+        run: npx tailwindcss -i .\\Styles\\app.css -o .\\wwwroot\\css\\app.css --minify 
+#       - name: NPM publish 
+#         run : npm run publish
          
       - name: Change base-tag in index.html from / to BlazeWind
         run: sed -i 's/<base href="\/" \/>/<base href="\/BlazeWind\/" \/>/g' release/wwwroot/index.html
