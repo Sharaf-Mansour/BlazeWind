@@ -47,8 +47,8 @@ jobs:
 #       - name: Compile SCSS
 #         run: sass Styles:Styles --no-source-map
       
-      - name: Build CSS     
-        run: npx tailwindcss -i .\\Styles\\app.css -o .\\wwwroot\\css\\app.css --minify 
+#       - name: Build CSS     
+#         run: npx tailwindcss -i .\\Styles\\app.css -o .\\wwwroot\\css\\app.css --minify 
 #       - name: NPM publish 
 #         run : npm run publish
          
