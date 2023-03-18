@@ -7,7 +7,7 @@
   "linkerEnabled": true,
   "resources": {
     "assembly": {
-      "BlazeWind.dll": "sha256-w3q+fSzypCFvkjert\/a1Hb32YaZmnUza0YeDsqykwNo=",
+      "BlazeWind.dll": "sha256-s6zYGQbcftHRoo+noSu\/A92N4LDUGpwYd1ZFveAHRu4=",
       "Microsoft.AspNetCore.Components.dll": "sha256-mqpJ+YjAr0D7BriTUJ63CDrkAVkz+MCMD77iRRlLOI4=",
       "Microsoft.AspNetCore.Components.Web.dll": "sha256-I5E15KFjP5Q86mlu6bxMNFpxnm4Bx1V5JX8AaYlMYlc=",
       "Microsoft.AspNetCore.Components.WebAssembly.dll": "sha256-1xKcdzUgQcSMSSPDaH3vGLBLRHjcqWWX47KO3NxZzUQ=",
