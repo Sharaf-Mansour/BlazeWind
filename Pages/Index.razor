@@ -215,17 +215,20 @@ module.exports = {
     "build": "dotnet build",
     "dev": "concurrently  
     \"sass Styles:Styles
-     --no-source-map -w \"
+    --no-source-map -w \"
     \"npx tailwindcss -i 
     .\\Styles\\app.css -o 
     .\\wwwroot\\css\\app.css 
     --minify --watch \"
     \"npx tailwindcss -i 
-    ./obj/Debug/net7.0/scopedcss/bundle/BlazeWind.styles.css  -o
-     ./obj/Debug/net7.0/scopedcss/bundle/BlazeWind.styles.css 
-     --minify --watch\" 
+    ./obj/Debug/net7.0/scopedcss
+    /bundle/BlazeWind.styles.css  -o
+    ./obj/Debug/net7.0/scopedcss
+    /bundle/BlazeWind.styles.css 
+    --minify --watch\" 
     \"cross-env 
-    DOTNET_WATCH_RESTART_ON_RUDE_EDIT=1 dotnet watch\""
+    DOTNET_WATCH_RESTART_ON_RUDE_EDIT=1
+    dotnet watch\""
   },
   "dependencies": {
   },
